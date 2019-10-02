@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script>
+        var flag = true;
+        function Setpoint(obj) {
+
+            if (flag) {
+                obj.innerText = 'O';
+                flag = false;
+            }
+            else {
+                obj.innerText = 'X';
+                flag = true;
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <table id='table1' border="1" style="width: 300px;height: 300px;font-size: 90px;align-content: center">
+        <caption>
+           OOXX
+        </caption>
+
+        <tr style="height: 100px;">
+            <td id="a1" style="width: 100px" onclick="Setpoint(document.getElementById('a1'))"></td>
+            <td id="a2" style="width: 100px" onclick="Setpoint(document.getElementById('a2'))"></td>
+            <td id="a3" style="width: 100px" onclick="Setpoint(document.getElementById('a3'))"></td>
+        </tr>
+        <tr style="height: 100px;">
+            <td id="b1" onclick="Setpoint(document.getElementById('b1'))"></td>
+            <td id="b2" onclick="Setpoint(document.getElementById('b2'))"></td>
+            <td id="b3" onclick="Setpoint(document.getElementById('b3'))"></td>
+        </tr>
+        <tr style="height: 100px;">
+            <td id="c1" onclick="Setpoint(document.getElementById('c1'))"></td>
+            <td id="c2" onclick="Setpoint(document.getElementById('c2'))"></td>
+            <td id="c3" onclick="Setpoint(document.getElementById('c3'))"></td>
+        </tr>
+
+
+    </table>
+</body>
+
+</html>
