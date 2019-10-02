@@ -9,15 +9,17 @@
     <script>
         var flag = true;
         function Setpoint(obj) {
+            if (obj.innerText == '') {
+                if (flag) {
+                    obj.innerText = 'O';
+                    flag = false;
+                }
+                else {
+                    obj.innerText = 'X';
+                    flag = true;
+                }
+            }
 
-            if (flag) {
-                obj.innerText = 'O';
-                flag = false;
-            }
-            else {
-                obj.innerText = 'X';
-                flag = true;
-            }
         }
     </script>
     <title>Document</title>
@@ -26,7 +28,7 @@
 <body>
     <table id='table1' border="1" style="width: 300px;height: 300px;font-size: 90px;align-content: center">
         <caption>
-           OOXX
+            OOXX
         </caption>
 
         <tr style="height: 100px;">
